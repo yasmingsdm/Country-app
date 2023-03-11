@@ -1,4 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a{
+  color: #3A98B9;
+}
+
+a:hover{
+  color: #012E46;
+}
+
 .app {
   text-align: center;
 }
  
+.footer{
+  background-color: #FFF1DC;
+  padding: 2rem;
+  text-align: center;
+  height: 20vh;
+}
