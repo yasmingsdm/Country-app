@@ -1,3 +1,4 @@
+
  export type CountriesType = {
      name: nameType;
      capital: string[];

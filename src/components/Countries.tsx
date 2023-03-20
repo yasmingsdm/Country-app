@@ -1,13 +1,25 @@
-import { CountriesType } from "../types"
 
-const Countries = (data: CountriesType[])=>{
+import CountriesTable from "./CountriesTable"
+
+const Countries = (data:any)=>{
    
 console.log(data)
 
     return (
         <div>
-            <h1>Countries</h1>
-              {/* {data && <p>{data[0].name.common} Hahaha</p>} */}
+            {data.data.length > 0 && 
+            <table>
+                <tr>
+                    <th>Country</th>
+                    <th>Flag</th>
+                    <th>Continent</th>
+                    <th>Favorite</th>
+                    <th>More info</th>
+                </tr>
+                   { data.data.map((data:any) => (
+                        <CountriesTable data={data} key={Math.random()}/>
+                    ))}
+            </table>} 
         </div>
     
     )}
