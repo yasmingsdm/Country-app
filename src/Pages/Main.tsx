@@ -12,10 +12,12 @@ const Main = ()=>{
     }
 
     return (
-        <div>
-            <h1>Main</h1>
+        <div className="page">
+            <img className="main__img" src="https://images.pexels.com/photos/269790/pexels-photo-269790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="world"/>
+            <div className="main__btns">
             <button onClick={learn}>Learn</button>
             <button onClick={practice}>Practice</button>
+            </div>
         </div>
    
     )}

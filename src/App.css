@@ -22,5 +22,56 @@ a:hover{
   background-color: #FFF1DC;
   padding: 2rem;
   text-align: center;
-  height: 20vh;
+  height: 15vh;
+}
+
+header{
+  background-color: #FFF1DC;
+  padding: 1rem;
+  height: 15vh;
+}
+
+.header__title{
+  font-size: 50px;
+  color: #3A98B9;
+  animation-name: h1-bigger;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes h1-bigger {
+  from{
+      transform: scale(1);
+  }
+  to{
+      transform: scale(1.5);
+  }
+}
+
+h1{
+  color: #3A98B9;
+}
+
+.page{
+  height:70vh;
+ padding: 100px;
+}
+
+button{
+  background-color: #3A98B9;
+  color: #EEEEEE;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin:1rem;
+  font-weight: 700;
+}
+
+.main__img{
+  width:300px
+}
+
+.main__btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -7,7 +7,7 @@ const Error =()=>{
         navigate('/')
     }
     return(
-        <div>
+        <div className="page">
         <h1>Page not found</h1>
         <button type='reset' onClick={goBack} >HOME</button>
         
