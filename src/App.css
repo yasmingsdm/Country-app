@@ -14,20 +14,24 @@ a:hover{
   color: #012E46;
 }
 
-.app {
+.light {
   text-align: center;
+  background-color: #FFF1DC;
+  color: #3A98B9;
+}
+
+.dark{
+  text-align: center;
+  background-color:#654321 ;
+  color: #FFF1DC
 }
  
 .footer{
-  background-color: #FFF1DC;
   padding: 2rem;
   text-align: center;
   height: 15vh;
 }
 
-header{
-  background-color: #FFF1DC;
-}
 
 nav{
   font-weight: 700;
@@ -37,7 +41,6 @@ nav{
   padding: 1rem;
   height: 15vh;
   font-size: 50px;
-  color: #3A98B9;
   animation-name: h1-bigger;
   animation-duration: 4s;
   animation-fill-mode: forwards;
@@ -56,10 +59,6 @@ ul{
   to{
       transform: scale(1.5);
   }
-}
-
-h1{
-  color: #3A98B9;
 }
 
 .page{
@@ -103,4 +102,18 @@ td{
 
 .table__flag{
   font-size: 100px
+}
+
+.fav{
+background-color: red;
+}
+
+.flag{
+  font-size: 200px;
+}
+
+input{
+  width:200px;
+  margin: 30px;
+  height: 40px
 }

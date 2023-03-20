@@ -2,8 +2,6 @@
 import CountriesTable from "./CountriesTable"
 
 const Countries = (data:any)=>{
-   
-console.log(data)
 
     return (
         <div>
@@ -16,9 +14,12 @@ console.log(data)
                     <th>Favorite</th>
                     <th>More info</th>
                 </tr>
-                   { data.data.map((data:any) => (
+                <tbody>
+                { data.data.map((data:any) => (
                         <CountriesTable data={data} key={Math.random()}/>
                     ))}
+                </tbody>
+               
             </table>} 
         </div>
     

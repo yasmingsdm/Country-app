@@ -1,18 +1,18 @@
+//@ts-nocheck
+import { useParams } from "react-router-dom";
+import CountryInfo from "../components/CountryInfo";
+import useFetch from "../components/useFetch";
 
 const Country = ()=>{
+    const {country} = useParams();
 
+    const {data, loading, error} = useFetch(`https://restcountries.com/v3.1/name/${country}`);
     return (
-        <section>
-            <h1>Country</h1>
-            <h2>{}</h2>
-            <h2>Continent: {}</h2>
-            <p>Population: {}</p>
-            <p>Languages:</p>
-            <ul><li></li></ul>
-        </section>
+        <div>
+            {loading && <p>Loading...</p>} 
+            {error ? <p>{error}</p> : <CountryInfo data={data}/> }
+        </div>
     )}
 
     export default Country
 
-
-    // The country detail should have name, region, population, flag and list of languages
