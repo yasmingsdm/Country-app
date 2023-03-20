@@ -18,7 +18,6 @@ const useFetch = (url: string)=>{
                 setLoading(false);
                 setError(null);
                 setData(json);
-                console.log(json)
             })
             .catch((e) => {
                 setData([]);
