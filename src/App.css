@@ -125,3 +125,7 @@ input{
 h2{
   padding: 15px;
 }
+
+.loading{
+  height: 60vh;
+}

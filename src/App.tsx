@@ -12,6 +12,7 @@ import Country from './Pages/Country';
 import Practice from './Pages/Practice';
 import Error from './Pages/Error';
 import Favorite from './Pages/Favorite';
+import Loading from './Pages/Loading';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path='/:country' element={<Country/>}/>
           <Route path='/practice' element={<Practice />}/>
           <Route path='/favorite' element = {<Favorite/>}/>
+          <Route path='/loading' element={<Loading/>}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer />

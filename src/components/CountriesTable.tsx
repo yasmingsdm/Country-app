@@ -1,4 +1,5 @@
 //@ts-nocheck
+
 import { useEffect, useState } from "react";
 import {FaRegHeart, FaAngleRight} from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -16,8 +17,6 @@ const CountriesTable = (data)=>{
     useEffect(()=>{
         localStorage.setItem('favoriteCountry', JSON.stringify(favoriteCountries))
     },[favoriteCountries])
-
-    console.log(data)
    
 
     const handleFavorite = (country)=>{
@@ -45,9 +44,8 @@ const CountriesTable = (data)=>{
             <td><button onClick={()=>handleFavorite(data)} className={favoriteColor(data)? 'fav': ''}><FaRegHeart/></button></td>
             <td><Link to={'/' + data.name.common}><FaAngleRight/></Link></td>
         </tr>
-    )
-    )
-    console.log(favoriteCountries)
+    ))
+
     return (
         <>
         {anyName}

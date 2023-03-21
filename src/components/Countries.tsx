@@ -1,8 +1,10 @@
 //@ts-nocheck
+
 import { useEffect, useState } from "react"
+
 import CountriesTable from "./CountriesTable"
 
-const Countries = (data:any)=>{
+const Countries = (data)=>{
     let list = []
     const [countryList, setCountryList] = useState(data.data)
 
@@ -11,7 +13,6 @@ const Countries = (data:any)=>{
     },[data.data])
 
     const handleSearch =(e)=>{
-        console.log(e.target.value)
         list = data.data.filter(data=>data.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
         setCountryList(list)
     }
