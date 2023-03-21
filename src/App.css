@@ -29,7 +29,7 @@ a:hover{
 .footer{
   padding: 2rem;
   text-align: center;
-  height: 15vh;
+  height: 20vh;
 }
 
 
@@ -39,7 +39,7 @@ nav{
 
 .header__title{
   padding: 1rem;
-  height: 15vh;
+  height: 20vh;
   font-size: 50px;
   animation-name: h1-bigger;
   animation-duration: 4s;
@@ -116,4 +116,8 @@ input{
   width:200px;
   margin: 30px;
   height: 40px
+}
+
+h2{
+  padding: 10px;
 }
