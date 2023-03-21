@@ -4,10 +4,10 @@ import {FaRegMoon} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 import './App.css'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './Pages/Main';
-import Learn from './Pages/Learn';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Main from './Pages/Main/Main';
+import Learn from './Pages/Learn/Learn';
 import Country from './Pages/Country';
 import Practice from './Pages/Practice';
 import Error from './Pages/Error';

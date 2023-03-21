@@ -4,7 +4,6 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
 a{
   color: #3A98B9;
 }
@@ -24,45 +23,15 @@ a:hover{
   background-color:#654321 ;
   color: #FFF1DC
 }
- 
-.footer{
-  padding: 2rem;
-  text-align: center;
-  height: 20vh;
-}
-
 
 nav{
   font-weight: 700;
-}
-
-.header__title{
-  padding: 1rem;
-  height: 20vh;
-  font-size: 50px;
-  animation-name: h1-bigger;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
 }
 
 ul{
   display: flex;
   justify-content: space-around;
   padding: 10px;
-}
-
-@keyframes h1-bigger {
-  from{
-      transform: scale(1);
-  }
-  to{
-      transform: scale(1.5);
-  }
-}
-
-.page{
-  height:70vh;
- padding: 100px;
 }
 
 button{
@@ -73,59 +42,20 @@ button{
   font-weight: 700;
 }
 
-.main__img{
-  width:300px
-}
-
-.main__btns{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-table{
-  margin: 20px auto;
-}
-
-table, th, td{
-  border: 2px solid #3A98B9;
-  border-collapse: collapse;
-}
-
-th, td{
-  padding: 20px;
-}
-td{
-  font-weight: 550;
-}
-
-.table__flag{
-  font-size: 100px
-}
-
-.fav{
-background-color: red;
-}
-
-.flag{
-  font-size: 200px;
-}
-
 input{
   width:200px;
   margin: 30px;
   height: 40px
 }
 
-.infoCountry{
-  display: flex;
-  justify-content: center;
-}
-
-h2{
-  padding: 15px;
+.flag{
+  font-size: 200px;
 }
 
 .loading{
   height: 60vh;
+}
+
+.page{
+  min-height:65vh;
 }

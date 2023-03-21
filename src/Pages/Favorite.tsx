@@ -17,7 +17,7 @@ const Favorite = ()=>{
         </tr>))
     
     return (
-        <table>
+        <table className="page">
             <thead>
                 <tr>
                     <th>Country</th>

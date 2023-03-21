@@ -8,7 +8,7 @@ const CountryInfo = ({data})=>{
         {data.length && <article>
         <h1>{name.common}</h1>
         <h1 className="flag">{flag}</h1>
-        <div className="infoCountry">
+        <div className="info__country">
         <h2>Capital: {capital} </h2>
         <h2>Continent: {continents} </h2>
         <h2>Population: {population} people</h2>

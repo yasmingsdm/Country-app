@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+import './Main.css'
+
 const Main = ()=>{
     const navigate = useNavigate()
 
@@ -12,7 +14,7 @@ const Main = ()=>{
     }
 
     return (
-        <div className="page">
+        <div className="mainPage page">
             <img className="main__img" src="https://images.pexels.com/photos/269790/pexels-photo-269790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="world"/>
             <div className="main__btns">
             <button onClick={learn}>Learn</button>

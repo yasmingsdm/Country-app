@@ -25,7 +25,7 @@ const Testing = (data)=>{
     }
 
     return (
-        <section>
+        <section className="page">
             {data.data.length > 0 && <h1 className="flag">{data.data[index].flag} </h1>}
             <input type='text' placeholder="Type the name of the country" onChange={handleChange}/>
             <button type='submit' onClick={handleSubmit}>Submit</button>
