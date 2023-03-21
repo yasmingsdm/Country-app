@@ -1,5 +1,4 @@
 //@ts-nocheck
-
 import { FaAngleRight } from "react-icons/fa"
 import { Link } from "react-router-dom"
 
@@ -8,7 +7,7 @@ const Favorite = ()=>{
     const favouriteList = localStorage.getItem('favoriteCountry')
     const result = favouriteList ? JSON.parse(favouriteList): []
 
-    const favoriteCountries = result.map(country=>(  
+    const favoriteCountries = result.map(country =>(  
         <tr key={Math.random()}>
             <td>{country.name.common}</td>
             <td className="table__flag">{country.flag}</td>

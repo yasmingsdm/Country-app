@@ -2,7 +2,7 @@
  export type CountryType = {
      name: nameType;
      capital: string[];
-     continent: string[];
+     continents: string[];
      population: number;
     languages: string; 
     flag: string
