@@ -1,9 +1,12 @@
 import {useState, useEffect} from "react";
 
+import { CountryType } from "../types";
+
+
 const useFetch = (url: string)=>{
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState<CountryType[]>([]);
+    const [error, setError] = useState<string|null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
 
     useEffect(() => {
         setLoading(true);

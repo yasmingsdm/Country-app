@@ -1,20 +1,23 @@
-//@ts-nocheck
 
 import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Testing = (data)=>{
+import { TestingProps } from "../types";
+
+
+const Testing = (props:TestingProps)=>{
+    const {data} = props
     const [countryName, setCountryName] = useState('')
     const [index, setIndex] = useState(0)
 
-    const handleChange = (e)=>{
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement> )=>{
         setCountryName(e.target.value)
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
         e.preventDefault()
-        if(countryName.toLowerCase() === data.data[index].name.common.toLowerCase()){
+        if(countryName.toLowerCase() === data[index].name.common.toLowerCase()){
             toast('Great! You did it right!')
             setIndex(prevIndex => prevIndex + 1)
             
@@ -26,8 +29,8 @@ const Testing = (data)=>{
 
     return (
         <section className="page">
-            {data.data.length > 0 && <h1 className="flag">{data.data[index].flag} </h1>}
-            <input type='text' placeholder="Type the name of the country" onChange={handleChange}/>
+            {data.length > 0 && <h1 className="flag">{data[index].flag} </h1>}
+            <input type='text' placeholder="Type the name of the country" value={countryName} onChange={handleChange}/>
             <button type='submit' onClick={handleSubmit}>Submit</button>
             <ToastContainer/>
         </section>
