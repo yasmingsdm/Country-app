@@ -11,6 +11,7 @@ import Learn from './Pages/Learn';
 import Country from './Pages/Country';
 import Practice from './Pages/Practice';
 import Error from './Pages/Error';
+import Favorite from './Pages/Favorite';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path='/learn' element={<Learn />}/>
           <Route path='/:country' element={<Country/>}/>
           <Route path='/practice' element={<Practice />}/>
+          <Route path='/favorite' element = {<Favorite/>}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer />

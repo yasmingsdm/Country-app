@@ -17,11 +17,11 @@ const Testing = (data)=>{
         if(countryName.toLowerCase() === data.data[index].name.common.toLowerCase()){
             toast('Great! You did it right!')
             setIndex(prevIndex => prevIndex + 1)
-            setCountryName('')
+            
         }else{
             toast('Oh, no! Maybe you need to study a little bit more!')
         }
-        
+        setCountryName('')
     }
 
     return (

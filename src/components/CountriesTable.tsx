@@ -1,40 +1,59 @@
 //@ts-nocheck
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {FaRegHeart, FaAngleRight} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const CountriesTable = (data)=>{
-const [favoriteCountries, setFavoriteCountries] = useState([]) 
-const [heart, setHeart] = useState('noFav')
+    const [favoriteCountries, setFavoriteCountries] = useState([]) 
 
-const handleFavorite = (name)=>{
-     if(heart==='noFav'){
-        toast('Country added to the favorite!')
-        setFavoriteCountries(prev => {return [...prev,  name]} )
-        console.log(favoriteCountries)
-        setHeart('fav')
-    } else { 
-        toast('Country removed from the favorite!')
-        setFavoriteCountries(favoriteCountries.filter(country => country.name !== name))
-        console.log(favoriteCountries)
-        setHeart('noFav')
+    useEffect(()=>{  
+        const favouriteList = localStorage.getItem('favoriteCountry')
+        const result = favouriteList ? JSON.parse(favouriteList):[]
+        setFavoriteCountries(result)},[])
 
+    useEffect(()=>{
+        localStorage.setItem('favoriteCountry', JSON.stringify(favoriteCountries))
+    },[favoriteCountries])
+
+    console.log(data)
+   
+
+    const handleFavorite = (country)=>{
+        if(!favoriteCountries.includes(country)){
+            toast('Country added to the favorite!')
+            setFavoriteCountries(prev => {return [...prev,  country]} )
+            
+        } else { 
+            toast('Country removed from the favorite!')
+            setFavoriteCountries(favoriteCountries.filter(countryList => countryList !== country))
+        }  
     }
 
-}
-    return (
-        <tr>
-            <td>{data.data.name.common}</td>
-            <td className="table__flag">{data.data.flag}</td>
-            <td>{data.data.continents}</td>
-            <td><button onClick={()=>handleFavorite(data.data.name.common)} className={heart}><FaRegHeart/></button></td>
-            <td><Link to={'/' + data.data.name.common}><FaAngleRight/></Link></td>
-            <ToastContainer/>
-        </tr>
-  
+    const favoriteColor = (data)=>{
+        if(favoriteCountries.includes(data)){
+            return true
+        } else { return false}
+    }
 
-    )}
+    const anyName = data.data.map(data =>(
+        <tr key={Math.random()}>
+            <td>{data.name.common}</td>
+            <td className="table__flag">{data.flag}</td>
+            <td>{data.continents}</td>
+            <td><button onClick={()=>handleFavorite(data)} className={favoriteColor(data)? 'fav': ''}><FaRegHeart/></button></td>
+            <td><Link to={'/' + data.name.common}><FaAngleRight/></Link></td>
+        </tr>
+    )
+    )
+    console.log(favoriteCountries)
+    return (
+        <>
+        {anyName}
+         <ToastContainer/>
+        </>
+    )
+}
 
     export default CountriesTable
