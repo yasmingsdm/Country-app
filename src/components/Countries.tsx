@@ -25,8 +25,8 @@ const Countries = (data)=>{
                 <thead>
                     <tr>
                         <th>Country</th>
-                        <th>Flag</th>
-                        <th>Continent</th>
+                        <th className="disapear">Flag</th>
+                        <th className="disapear">Continent</th>
                         <th>Favorite</th>
                         <th>More info</th>
                     </tr>

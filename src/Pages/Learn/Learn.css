@@ -31,3 +31,17 @@ td{
 h2{
     padding: 10px;
 }
+
+@media screen and (max-width: 1024px) {
+    .disapear{
+        display: none
+    }
+
+    .info__country{
+        display: block;
+    }
+
+    h2{
+        font-size: 18px
+    }
+}

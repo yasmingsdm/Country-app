@@ -39,8 +39,8 @@ const CountriesTable = (data)=>{
     const anyName = data.data.map(data =>(
         <tr key={Math.random()}>
             <td>{data.name.common}</td>
-            <td className="table__flag">{data.flag}</td>
-            <td>{data.continents}</td>
+            <td className="table__flag disapear">{data.flag}</td>
+            <td className="disapear">{data.continents}</td>
             <td><button onClick={()=>handleFavorite(data)} className={favoriteColor(data)? 'fav': ''}><FaRegHeart/></button></td>
             <td><Link to={'/' + data.name.common}><FaAngleRight/></Link></td>
         </tr>

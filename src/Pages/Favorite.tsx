@@ -12,7 +12,7 @@ const Favorite = ()=>{
         <tr key={Math.random()}>
             <td>{country.name.common}</td>
             <td className="table__flag">{country.flag}</td>
-            <td>{country.continents}</td>
+            <td className="disapear">{country.continents}</td>
             <td><Link to={'/' + country.name.common}><FaAngleRight/></Link></td>
         </tr>))
     
@@ -22,7 +22,7 @@ const Favorite = ()=>{
                 <tr>
                     <th>Country</th>
                     <th>Flag</th>
-                    <th>Continent</th>
+                    <th className="disapear">Continent</th>
                     <th>More info</th>
                 </tr>
             </thead>
