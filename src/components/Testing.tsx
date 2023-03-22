@@ -19,11 +19,12 @@ const Testing = (props:TestingProps)=>{
         e.preventDefault()
         if(countryName.toLowerCase() === data[index].name.common.toLowerCase()){
             toast('Great! You did it right!')
-            setIndex(prevIndex => prevIndex + 1)
+            
             
         }else{
             toast('Oh, no! Maybe you need to study a little bit more!')
         }
+        setIndex(Math.floor(Math.random()*250))
         setCountryName('')
     }
 
