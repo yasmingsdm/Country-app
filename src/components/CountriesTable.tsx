@@ -44,7 +44,7 @@ const CountriesTable = (data: CountriesTableProps)=>{
             <td className="table__flag disapear">{data.flag}</td>
             <td className="disapear">{data.continents}</td>
             <td><button onClick={()=>handleFavorite(data)} className={favoriteColor(data)? 'fav': ''}><FaRegHeart/></button></td>
-            <td><Link to={'/' + data.name.common}><FaAngleRight/></Link></td>
+            <td><Link to={'/learn/' + data.name.common}><FaAngleRight/></Link></td>
         </tr>
     ))
 

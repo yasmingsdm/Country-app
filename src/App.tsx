@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='/learn' element={<Learn />}/>
-          <Route path='/:country' element={<Country/>}/>
+          <Route path='/learn/:country' element={<Country/>}/>
           <Route path='/practice' element={<Practice />}/>
           <Route path='/favorite' element = {<Favorite/>}/>
           <Route path='/loading' element={<Loading/>}/>

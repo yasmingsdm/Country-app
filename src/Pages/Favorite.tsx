@@ -1,11 +1,12 @@
-//@ts-nocheck
+
 import { FaAngleRight } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import { CountryType } from "../types"
 
 
 const Favorite = ()=>{
     const favouriteList = localStorage.getItem('favoriteCountry')
-    const result = favouriteList ? JSON.parse(favouriteList): []
+    const result: CountryType[] = favouriteList ? JSON.parse(favouriteList): []
 
     const favoriteCountries = result.map(country =>(  
         <tr key={Math.random()}>
