@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react"
+import { ToastContainer } from 'react-toastify';
 
 import { CountriesProps } from "../types"
 import CountriesTable from "./CountriesTable"
@@ -22,6 +23,7 @@ const Countries = (data:CountriesProps)=>{
     return (
         <div>
             <input type='text' placeholder="Search" onChange={handleSearch}/>
+            <ToastContainer/>
             {data.data.length > 0 && 
             <table>
                 <thead>

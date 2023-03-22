@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import {FaRegHeart, FaAngleRight} from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { CountriesTableProps, CountryType } from "../types";
@@ -53,7 +53,7 @@ const CountriesTable = (data: CountriesTableProps)=>{
         <tbody>
         {tableData}
 </tbody>
-         <ToastContainer/>
+         
         </>
     )
 }
