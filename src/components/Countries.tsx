@@ -33,9 +33,7 @@ const Countries = (data:CountriesProps)=>{
                         <th>More info</th>
                     </tr>
                 </thead>
-                <tbody>
                     <CountriesTable data={countryList}/>
-                </tbody>
             </table>} 
         </div>
     

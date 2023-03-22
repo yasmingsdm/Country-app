@@ -50,7 +50,9 @@ const CountriesTable = (data: CountriesTableProps)=>{
 
     return (
         <>
+        <tbody>
         {tableData}
+</tbody>
          <ToastContainer/>
         </>
     )
