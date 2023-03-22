@@ -13,7 +13,7 @@ const Favorite = ()=>{
             <td>{country.name.common}</td>
             <td className="table__flag">{country.flag}</td>
             <td className="disapear">{country.continents}</td>
-            <td><Link to={'/' + country.name.common}><FaAngleRight/></Link></td>
+            <td><Link to={'/learn/' + country.name.common}><FaAngleRight/></Link></td>
         </tr>))
     
     return (
