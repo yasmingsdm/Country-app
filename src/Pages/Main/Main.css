@@ -1,0 +1,19 @@
+.mainPage{
+    padding: 100px;
+}
+
+.main__img{
+    width:300px
+}
+  
+.main__btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .main__img{
+        margin-bottom: 10px;
+    }
+}

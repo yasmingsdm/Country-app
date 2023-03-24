@@ -1,0 +1,47 @@
+table{
+    margin: 20px auto;
+  }
+  
+table, th, td{
+    border: 2px solid #3A98B9;
+    border-collapse: collapse;
+}
+  
+th, td{
+    padding: 20px;
+}
+  
+td{
+    font-weight: 550;
+}
+  
+.table__flag{
+    font-size: 100px
+}
+
+.fav{
+    background-color: red;
+}
+
+.info__country{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .disapear{
+        display: none
+    }
+
+    .info__country{
+        display: block;
+    }
+
+    h2{
+        font-size: 18px
+    }
+}
