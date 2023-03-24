@@ -1,4 +1,4 @@
-##Country App
+## Country App
 
 This is a website where you can find information about 250 countries (such as flag, population, continent, capital) and play a game where you have to say the name of the country according to the flag.
 
